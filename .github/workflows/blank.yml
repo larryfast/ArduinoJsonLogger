@@ -47,8 +47,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo It's easy to expose a secret value:
-          echo my_test_secret2=${{secret.my_test_secret2}} | tr e 3
-          echo GITHUB_TOKEN=${{secret.GITHUB_TOKEN}} |tr [0-9] [1-90]
+          echo my_test_secret2=${{secrets.my_test_secret2}} | tr e 3
+          echo GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}} |tr [0-9] [1-90]
           env | sort
         env:
           new_var: hello_larry
