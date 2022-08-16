@@ -50,7 +50,7 @@ jobs:
           echo "CICD can easily fail because of typos = ${{secrets.my_test_secret2}}"
           echo 
           echo WARNING: Its easy to expose secret values:
-          echo my_test_secret2=${{secrets.my_first_secret}} | rev
+          echo my_test_secret2=`echo ${{secrets.my_first_secret}} |rev`
           echo GITHUB_TOKEN=${{secrets.GITHUB_TOKEN}} |rev
           echo
           env | sort
