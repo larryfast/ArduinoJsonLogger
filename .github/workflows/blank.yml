@@ -48,7 +48,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo my_test_secret2 | tr e 3
-        with:
+        env:
           new_var: hello_larry
           my_test_secret2: ${{ secrets.my_first_secret }}
 
