@@ -23,7 +23,7 @@ env:
   # set global environment variables
 
   # import secrets - LF: I prefer the visibility of loading these globally
-  my_test_secret: ${{ secrets.my_first_secret |tr  }}
+  my_test_secret: ${{ secrets.my_first_secret }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
