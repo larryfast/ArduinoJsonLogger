@@ -6,7 +6,7 @@ name: blank_name_in_GUI
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: [ "master", "add_github_workflow" ]
   pull_request:
     branches: [ "master" ]
 
@@ -47,7 +47,9 @@ jobs:
           env | sort
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo my_test_secret2 | tr e 3
+          echo It's easy to expose a secret value:
+          echo my_test_secret2=${{my_test_secret2}} | tr e 3
+          echo GITHUB_TOKEN=${{secret.GITHUB_TOKEN}} |tr [0-9] [1-90]
         env:
           new_var: hello_larry
           my_test_secret2: ${{ secrets.my_first_secret }}
